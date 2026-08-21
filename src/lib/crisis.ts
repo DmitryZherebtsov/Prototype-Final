@@ -169,11 +169,34 @@ export const CATEGORY_LABELS: Record<ResourceCategory, string> = {
   logistics: "Logistyczne",
 };
 
+/** Iconify icon names per resource category (used in the resource matrix headers). */
+export const CATEGORY_ICONS: Record<ResourceCategory, string> = {
+  human: "solar:users-group-rounded-bold",
+  material: "solar:box-bold",
+  logistics: "solar:truck-bold",
+};
+
 export const AVAILABILITY_LABELS: Record<AvailabilityWindow, string> = {
   "24h": "Dostępne w ciągu 24h",
   "48h": "Dostępne w ciągu 48h",
   "72h": "Dostępne w ciągu 72h",
   "1week": "Dostępne w ciągu tygodnia",
+};
+
+/** Compact availability labels for narrow table columns and cell badges. */
+export const AVAILABILITY_SHORT: Record<AvailabilityWindow, string> = {
+  "24h": "24h",
+  "48h": "48h",
+  "72h": "72h",
+  "1week": "Tydzień",
+};
+
+/** Sort order for availability — lower means the resource can be mobilised sooner. */
+export const AVAILABILITY_ORDER: Record<AvailabilityWindow, number> = {
+  "24h": 0,
+  "48h": 1,
+  "72h": 2,
+  "1week": 3,
 };
 
 export const TAG_LABELS: Record<FeedTag, string> = {
